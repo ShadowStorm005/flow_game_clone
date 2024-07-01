@@ -1,10 +1,10 @@
 import sqlite3
 
-conn = sqlite3.connect('level_answears.db')
+conn = sqlite3.connect('./level_answers.db')
 
 cur = conn.cursor()
 
-cur.execute('''CREATE TABLE IF NOT EXISTS 5x5
+cur.execute('''CREATE TABLE IF NOT EXISTS grid_5x5
             (Level_nr INTEGER,
             Green LIST,
             Red LIST,
@@ -12,7 +12,7 @@ cur.execute('''CREATE TABLE IF NOT EXISTS 5x5
             Yellow LIST,
             Purple LIST)
 ''')
-cur.execute('''CREATE TABLE IF NOT EXISTS 6x6
+cur.execute('''CREATE TABLE IF NOT EXISTS grid_6x6
             (Level_nr INTEGER,
             Green LIST,
             Red LIST,
@@ -21,7 +21,7 @@ cur.execute('''CREATE TABLE IF NOT EXISTS 6x6
             Purple LIST,
             Orange LIST)
 ''')
-cur.execute('''CREATE TABLE IF NOT EXISTS 7x7
+cur.execute('''CREATE TABLE IF NOT EXISTS grid_7x7
             (Level_nr INTEGER,
             Green LIST,
             Red LIST,
